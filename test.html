@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #myButton {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+  <title>Show Hello Button</title>
+</head>
+<body>
+
+<button id="myButton" onclick="showHello()">Click me</button>
+
+<script>
+  function showHello() {
+    // Get the button element
+    var button = document.getElementById("myButton");
+
+    // Add text to the button
+    button.innerText = "Hello!";
+  }
+</script>
+
+</body>
+</html>
