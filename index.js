@@ -147,3 +147,7 @@ function resetGame(){
     restartGame.innerHTML='Game Is Tie';
     resetGame.style.left='0';
 }
+
+function playAgain(){
+    window.location.reload(true);
+}
