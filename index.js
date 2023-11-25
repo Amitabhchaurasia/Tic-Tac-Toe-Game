@@ -7,80 +7,85 @@ let array = [
 let count=0;
 let match=false;
 function handleButtonClick(buttonId) {
-    console.log(count);
-    if(num%2!=0){
-        var button = document.getElementById(buttonId);
-        if(buttonId=='one'){
-            array[0][0]=1;
-        }
-        if(buttonId=='two'){
-            array[0][1]=1;
-        }
-        if(buttonId=='three'){
-            array[0][2]=1;
-        }
-        if(buttonId=='four'){
-            array[1][0]=1;
-        }
-        if(buttonId=='five'){
-            array[1][1]=1;
-        }
-        if(buttonId=='six'){
-            array[1][2]=1;
-        }
-        if(buttonId=='seven'){
-            array[2][0]=1;
-        }
-        if(buttonId=='eight'){
-            array[2][1]=1;
-        }
-        if(buttonId=='nine'){
-            array[2][2]=1;
-        }
-        button.textContent = 'X';
-        matchCheek();
-        num++;
-        count++;
-    
-    }else{
-        var button = document.getElementById(buttonId);
-        if(buttonId=='one'){
-            array[0][0]=0;
-        }
-        if(buttonId=='two'){
-            array[0][1]=0;
-        }
-        if(buttonId=='three'){
-            array[0][2]=0;
-        }
-        if(buttonId=='four'){
-            array[1][0]=0;
-        }
-        if(buttonId=='five'){
-            array[1][1]=0;
-        }
-        if(buttonId=='six'){
-            array[1][2]=0;
-        }
-        if(buttonId=='seven'){
-            array[2][0]=0;
-        }
-        if(buttonId=='eight'){
-            array[2][1]=0;
-        }
-        if(buttonId=='nine'){
-            array[2][2]=0;
-        }
+    var b=document.getElementById(buttonId)
+    if (b.innerText== '\u00A0') {
+        console.log(count);
+        if(num%2!=0){
+            var button = document.getElementById(buttonId);
+            if(buttonId=='one'){
+                array[0][0]=1;
+            }
+            if(buttonId=='two'){
+                array[0][1]=1;
+            }
+            if(buttonId=='three'){
+                array[0][2]=1;
+            }
+            if(buttonId=='four'){
+                array[1][0]=1;
+            }
+            if(buttonId=='five'){
+                array[1][1]=1;
+            }
+            if(buttonId=='six'){
+                array[1][2]=1;
+            }
+            if(buttonId=='seven'){
+                array[2][0]=1;
+            }
+            if(buttonId=='eight'){
+                array[2][1]=1;
+            }
+            if(buttonId=='nine'){
+                array[2][2]=1;
+            }
+            button.textContent = 'X';
+            matchCheek();
+            num++;
+            count++;
         
-        button.textContent = 'O';
-        num++;
-        matchCheek();
-        count++;
+        }else{
+            var button = document.getElementById(buttonId);
+            if(buttonId=='one'){
+                array[0][0]=0;
+            }
+            if(buttonId=='two'){
+                array[0][1]=0;
+            }
+            if(buttonId=='three'){
+                array[0][2]=0;
+            }
+            if(buttonId=='four'){
+                array[1][0]=0;
+            }
+            if(buttonId=='five'){
+                array[1][1]=0;
+            }
+            if(buttonId=='six'){
+                array[1][2]=0;
+            }
+            if(buttonId=='seven'){
+                array[2][0]=0;
+            }
+            if(buttonId=='eight'){
+                array[2][1]=0;
+            }
+            if(buttonId=='nine'){
+                array[2][2]=0;
+            }
+            
+            button.textContent = 'O';
+            num++;
+            matchCheek();
+            count++;
+        }
+    
+        if(count>=9 && match==false){
+            resetGame();
+        }
     }
-
-    if(count>=9 && match==false){
-        resetGame();
-    }
+    
+    
 }
 
 function matchCheek() {
