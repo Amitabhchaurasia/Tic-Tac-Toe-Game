@@ -38,7 +38,6 @@ function handleButtonClick(buttonId) {
             array[2][2]=1;
         }
         button.textContent = 'X';
-        button.disabled = true;
         matchCheek();
         num++;
         count++;
@@ -72,7 +71,7 @@ function handleButtonClick(buttonId) {
         if(buttonId=='nine'){
             array[2][2]=0;
         }
-        button.disabled = true;
+        
         button.textContent = 'O';
         num++;
         matchCheek();
