@@ -4,7 +4,10 @@ let array = [
     [3,5, 4],
     [2, 6,10 ]
   ];
+let count=0;
+let match=false;
 function handleButtonClick(buttonId) {
+    console.log(count);
     if(num%2!=0){
         var button = document.getElementById(buttonId);
         if(buttonId=='one'){
@@ -38,6 +41,7 @@ function handleButtonClick(buttonId) {
         button.disabled = true;
         matchCheek();
         num++;
+        count++;
     
     }else{
         var button = document.getElementById(buttonId);
@@ -72,6 +76,11 @@ function handleButtonClick(buttonId) {
         button.textContent = 'O';
         num++;
         matchCheek();
+        count++;
+    }
+
+    if(count>=9 && match==false){
+        resetGame();
     }
 }
 
@@ -120,6 +129,7 @@ function enableButtons(buttonIds) {
         var button = document.getElementById(id);
         button.disabled = false;
     });
+    match=true;
 }
 
 // Helper function to update reset element
@@ -128,4 +138,12 @@ function updateResetElement(winnerId) {
     var winnerelement = document.getElementById('winner');
     winnerelement.innerHTML = 'Winner is '+document.getElementById(winnerId).textContent;
     resetElement.style.left = '0';
+
+}
+
+function resetGame(){
+    var resetGame=document.querySelector('.resetGame');
+    var restartGame = document.getElementById('restartGame');
+    restartGame.innerHTML='Game Is Tie';
+    resetGame.style.left='0';
 }

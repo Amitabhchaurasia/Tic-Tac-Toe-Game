@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-
+    overflow-y: hidden;
 }
 
 
@@ -11,11 +11,12 @@
     display: flex;
     flex-direction: column;
     margin: 80px auto;
+    
 }
 
 .button {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     font-size: 16px;
 }
 
@@ -23,6 +24,7 @@
 .row2,
 .row3 {
     margin: 0 auto;
+    margin-bottom: 4px;
 }
 .reset{
     display: flex;
@@ -34,11 +36,25 @@
     height: 70px;
     margin: 0 auto;
     position: relative;
-    bottom: 190px;
+    bottom: 273px;
     left: -1000px;
 }
-.reset button{
+.reset button,.resetGame button{
     width: 120px;
     height: 30px;
     background-color: gold;
+}
+
+.resetGame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 160px;
+    height: 70px;
+    margin: 0 auto;
+    background-color: green;
+    position: relative;
+    bottom: 140px;
+    left: -1000px;
 }
